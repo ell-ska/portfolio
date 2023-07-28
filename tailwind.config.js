@@ -14,12 +14,12 @@ module.exports = {
         400: '#CDD5E0',
         700: '#677489',
         900: '#111827',
-        DEFAULT: '#111827'
+        DEFAULT: '#111827',
       },
       blue: '#A3CBF0',
       pink: '#FEC8E8',
-      green: '#00C28A'
-    }
+      green: '#00C28A',
+    },
   },
   plugins: [],
 }
