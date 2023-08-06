@@ -20,6 +20,17 @@ module.exports = {
       pink: '#FEC8E8',
       green: '#00C28A',
     },
+    fontFamily: {
+      sans: ['var(--font-outfit)'],
+    },
+    extend: {
+      screens: {
+        'touch-device': { raw: '(pointer: coarse) and (hover: none)' },
+      },
+    },
   },
   plugins: [],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }

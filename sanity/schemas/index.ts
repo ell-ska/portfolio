@@ -1,5 +1,4 @@
-import type { SchemaTypeDefinition } from 'sanity'
-import { projects } from './projects'
+import { project } from './project'
 import { about } from './about'
 
-export const schema = [projects, about]
+export const schema = [project, about]

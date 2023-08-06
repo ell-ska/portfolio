@@ -1,7 +1,8 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
-import { InfoOutlineIcon } from '@sanity/icons'
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+import { Paintbrush, Info } from 'lucide-react'
 import { apiVersion, dataset, projectId } from './sanity/env'
 import { schema } from './sanity/schemas'
 
@@ -14,21 +15,27 @@ export default defineConfig({
   dataset,
   plugins: [
     deskTool({
-      structure: S =>
+      structure: (S, context) =>
         S.list()
           .title('Content')
           .items([
             S.listItem()
               .title('About')
               .id('about')
-              .icon(InfoOutlineIcon)
+              .icon(Info)
               .child(
                 S.document()
                   .title('About')
                   .schemaType('about')
                   .documentId('about'),
               ),
-            S.documentTypeListItem('projects').title('Projects'),
+            orderableDocumentListDeskItem({
+              type: 'project',
+              title: 'Projects',
+              icon: Paintbrush,
+              S,
+              context,
+            }),
           ]),
     }),
     visionTool({ defaultApiVersion: apiVersion }),

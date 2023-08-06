@@ -1,14 +1,29 @@
+import slugify from '@/utils/slugify'
 import { defineField, defineType } from 'sanity'
+import { orderRankField } from '@sanity/orderable-document-list'
+import { ProjectIcon } from '@/components/Icons'
 
-const projects = defineType({
-  name: 'projects',
+const project = defineType({
+  name: 'project',
   title: 'Projects',
   type: 'document',
   fields: [
+    orderRankField({
+      type: 'string',
+    }),
     defineField({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: rule => rule.required(),
+    }),
+    defineField({
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        slugify: input => slugify(input),
+      },
       validation: rule => rule.required(),
     }),
     defineField({
@@ -46,7 +61,9 @@ const projects = defineType({
       name: 'phone_images',
       title: 'iPhone images',
       type: 'object',
+      validation: rule => rule.required(),
       fields: [
+        // [] add alt texts
         defineField({
           name: 'main',
           title: 'Main image',
@@ -66,6 +83,18 @@ const projects = defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      title: 'name',
+      color: 'accent_color',
+    },
+    prepare({ title, color }) {
+      return {
+        title,
+        media: <ProjectIcon color={color} />,
+      }
+    },
+  },
 })
 
-export { projects }
+export { project }

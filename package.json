@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 2002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
+    "@sanity/orderable-document-list": "^1.1.0",
     "@sanity/vision": "^3.14.4",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
