@@ -10,4 +10,10 @@ const getHomepageProjects = async () => {
   )
 }
 
-export { getHomepageDescription, getHomepageProjects }
+const getProject = async (slug: string) => {
+  return await client.fetch(
+    `*[_type == "project" && slug.current == "${slug}"][0]`,
+  )
+}
+
+export { getHomepageDescription, getHomepageProjects, getProject }
