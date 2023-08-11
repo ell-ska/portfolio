@@ -2,10 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MoveRight } from 'lucide-react'
 import { urlForImage } from '@/sanity/lib/image'
-import type Project from '@/sanity/types/project'
 import formatHexColor from '@/utils/formatHexColor'
+import type { HomepageProject } from '@/sanity/types/project'
 
-const ProjectCard = ({ name, slug, accent_color, phone_images }: Project) => {
+const ProjectCard = ({
+  name,
+  slug,
+  accent_color,
+  phone_images,
+}: HomepageProject) => {
   return (
     <Link
       href={`/work/${slug.current}`}

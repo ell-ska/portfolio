@@ -16,5 +16,10 @@ interface Project extends SanityDocument {
   phone_images: PhoneImages
 }
 
-export type { PhoneImages }
+type HomepageProject = Pick<
+  Project,
+  'name' | 'slug' | 'accent_color' | 'phone_images' | '_id'
+>
+
+export type { PhoneImages, HomepageProject }
 export default Project

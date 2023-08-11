@@ -11,7 +11,7 @@ const Banner = ({
   accentColor: string
 }) => {
   return (
-    <div
+    <section
       className='flex h-[75vh] items-center justify-center overflow-hidden'
       style={{ backgroundColor: formatHexColor(accentColor) }}>
       <div className='relative h-[calc(100%-4rem)] w-64 md:h-[calc(100%+4rem)] md:w-80'>
@@ -39,7 +39,7 @@ const Banner = ({
           </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 
