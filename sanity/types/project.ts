@@ -1,5 +1,5 @@
 import type { SanityDocument } from 'next-sanity'
-import type { Image, PortableTextBlock, Slug } from 'sanity'
+import type { File, Image, PortableTextBlock, Slug } from 'sanity'
 
 type PhoneImages = {
   main: Image
@@ -14,6 +14,7 @@ interface Project extends SanityDocument {
   description: PortableTextBlock
   links?: { live_project?: string; source_code?: string }
   phone_images: PhoneImages
+  preview_video: File
 }
 
 type HomepageProject = Pick<

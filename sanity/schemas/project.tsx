@@ -82,6 +82,11 @@ const project = defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'preview_video',
+      title: 'Preview video',
+      type: 'file',
+    }),
   ],
   preview: {
     select: {

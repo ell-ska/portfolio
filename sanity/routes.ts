@@ -18,6 +18,12 @@ const getProject = async (slug: string) => {
   )
 }
 
+const getPreviewVideo = async (slug: string) => {
+  return await client.fetch(
+    `*[_type == "project" && slug.current == "${slug}"]{preview_video{asset->{path, url}}}[0]`,
+  )
+}
+
 const getNextProject = async (previous: Slug) => {
   const count = await client.fetch('count(*[_type == "project"])')
   const result: Pick<Project, 'name' | 'slug'>[] = await client.fetch(
@@ -35,5 +41,6 @@ export {
   getHomepageDescription,
   getHomepageProjects,
   getProject,
+  getPreviewVideo,
   getNextProject,
 }
