@@ -4,7 +4,7 @@ import Project from '@/sanity/types/project'
 
 const NextProject = ({ name, slug }: Pick<Project, 'name' | 'slug'>) => {
   return (
-    <section className='mb-8 mt-12 px-6 md:px-20'>
+    <section className='mt-12 px-6 pb-8 md:px-20'>
       <span>Next project</span>
       <Link
         href={`/work/${slug.current}`}
