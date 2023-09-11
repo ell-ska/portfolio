@@ -37,10 +37,15 @@ const getNextProject = async (previous: Slug) => {
   return previousIndex + 1 >= count ? result[0] : result[previousIndex + 1]
 }
 
+const getAbout = async () => {
+  return await client.fetch('*[_type == "about"][0]')
+}
+
 export {
   getHomepageDescription,
   getHomepageProjects,
   getProject,
   getPreviewVideo,
   getNextProject,
+  getAbout,
 }

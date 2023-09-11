@@ -1,3 +1,4 @@
+import * as Logos from '@icons-pack/react-simple-icons'
 import formatHexColor from '@/utils/formatHexColor'
 
 const Logo = ({ className }: { className?: string }) => {
@@ -60,4 +61,16 @@ const ProjectIcon = ({ color }: { color?: string }) => {
   )
 }
 
-export { Logo, ProjectIcon }
+const DynamicIcon = ({ name, color }: { name: string; color?: string }) => {
+  if (name) name = `Si${name.charAt(0).toUpperCase() + name.slice(1)}`
+
+  const Icon = Logos[name as keyof typeof Logos]
+
+  if (!Icon) {
+    return <Logos.SiReact />
+  }
+
+  return <Icon color={color} />
+}
+
+export { Logo, ProjectIcon, DynamicIcon }

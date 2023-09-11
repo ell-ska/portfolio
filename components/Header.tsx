@@ -17,7 +17,10 @@ const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
       <Link href='/'>
         <Logo></Logo>
       </Link>
-      <Link href='/'>Work</Link>
+      <nav className='space-x-8'>
+        <Link href='/'>Work</Link>
+        <Link href='/about'>About</Link>
+      </nav>
     </motion.header>
   )
 }
