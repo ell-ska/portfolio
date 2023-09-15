@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ContentSwitch from './ContentSwitch'
+import Background from './Background'
 import About from '@/sanity/types/about'
 
 const menuItems = ['about', 'skills', 'education', 'contact', 'testimonials']
@@ -30,6 +31,7 @@ const Section = ({ content }: { content: About }) => {
       <section className='w-full max-w-4xl text-lg'>
         <ContentSwitch activeSection={activeSection} {...content} />
       </section>
+      <Background activeSection={activeSection} />
     </>
   )
 }
