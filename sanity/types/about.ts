@@ -18,6 +18,12 @@ interface About extends SanityDocument {
     _key: string
   }[]
   contact: { name: string; link: string; _key: string }[]
+  testimonials: {
+    testimonial: PortableTextBlock
+    name: string
+    position: string
+    _key: string
+  }[]
 }
 
 export default About

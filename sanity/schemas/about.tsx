@@ -154,6 +154,40 @@ const about = defineType({
       ],
       validation: rule => rule.required(),
     }),
+    defineField({
+      name: 'testimonials',
+      title: 'Testimonials',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          name: 'testimonials',
+          title: 'Testimonials',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'testimonial',
+              title: 'Testimonial',
+              type: 'array',
+              of: [{ type: 'block' }],
+              validation: rule => rule.required(),
+            }),
+            defineField({
+              name: 'name',
+              title: 'Name',
+              type: 'string',
+              validation: rule => rule.required(),
+            }),
+            defineField({
+              name: 'position',
+              title: 'Position',
+              type: 'string',
+              validation: rule => rule.required(),
+            }),
+          ],
+        }),
+      ],
+      validation: rule => rule.required(),
+    }),
   ],
 })
 

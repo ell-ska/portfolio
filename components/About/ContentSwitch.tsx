@@ -3,6 +3,7 @@ import Skills from './Skills'
 import Education from './Education'
 import Contact from './Contact'
 import type { default as AboutProps } from '@/sanity/types/about'
+import Testimonials from './Testimonials'
 
 type ContentProps = { activeSection: string } & AboutProps
 
@@ -12,6 +13,7 @@ const ContentSwitch = ({
   skills,
   education,
   contact,
+  testimonials,
 }: ContentProps) => {
   switch (activeSection) {
     case 'about':
@@ -22,6 +24,8 @@ const ContentSwitch = ({
       return <Education education={education} />
     case 'contact':
       return <Contact contact={contact} />
+    case 'testimonials':
+      return <Testimonials testimonials={testimonials} />
   }
 }
 
