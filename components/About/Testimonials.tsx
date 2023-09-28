@@ -1,4 +1,3 @@
-'use client'
 import { PortableText } from '@portabletext/react'
 import type About from '@/sanity/types/about'
 

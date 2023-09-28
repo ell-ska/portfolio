@@ -1,5 +1,4 @@
 import { DynamicIcon } from '@/components/Icons'
-import { Cross } from 'lucide-react'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 const about = defineType({
@@ -64,7 +63,6 @@ const about = defineType({
               color: 'color',
             },
             prepare({ title, icon, color }) {
-              console.log(color)
               return {
                 title,
                 media: <DynamicIcon name={icon} color={color} />,
