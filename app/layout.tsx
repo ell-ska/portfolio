@@ -8,21 +8,21 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
 export const metadata: Metadata = {
   title: 'ellska',
   description:
-    'ellska is a frontend developer with a passion for building modern and beautiful websites',
+    'a frontend developer with a passion for building modern and beautiful websites',
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
     title: 'ellska',
     description:
-      'ellska is a frontend developer with a passion for building modern and beautiful websites',
+      'a frontend developer with a passion for building modern and beautiful websites',
     url: 'https://ellska.dev',
     siteName: 'ellska.dev',
     images: [
       {
         url: ogImage.src,
-        width: 2800,
-        height: 1600,
+        width: 1440,
+        height: 823,
       },
     ],
     type: 'website',
