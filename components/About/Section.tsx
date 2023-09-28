@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import ContentSwitch from './ContentSwitch'
 import About from '@/sanity/types/about'
 
-const menuItems = ['about', 'skills', 'education', 'contact', 'testimonials']
+// const menuItems = ['about', 'skills', 'education', 'contact', 'testimonials']
+const menuItems = ['about', 'skills', 'education', 'contact']
 
 const Section = ({ content }: { content: About }) => {
   const [activeSection, setActiveSection] = useState('about')
