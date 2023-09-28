@@ -17,15 +17,15 @@ const ContentSwitch = ({
 }: ContentProps) => {
   switch (activeSection) {
     case 'about':
-      return <About long_description={long_description} />
+      return long_description && <About long_description={long_description} />
     case 'skills':
-      return <Skills skills={skills} />
+      return skills && <Skills skills={skills} />
     case 'education':
-      return <Education education={education} />
+      return education && <Education education={education} />
     case 'contact':
-      return <Contact contact={contact} />
+      return contact && <Contact contact={contact} />
     case 'testimonials':
-      return <Testimonials testimonials={testimonials} />
+      return testimonials && <Testimonials testimonials={testimonials} />
   }
 }
 
