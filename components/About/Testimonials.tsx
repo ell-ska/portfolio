@@ -1,9 +1,11 @@
+'use client'
 import { PortableText } from '@portabletext/react'
 import type About from '@/sanity/types/about'
 
 type TestimonialsProps = Pick<About, 'testimonials'>
 
 const Testimonials = ({ testimonials }: TestimonialsProps) => {
+  console.log(testimonials)
   return (
     <div className='flex flex-wrap justify-center gap-8'>
       {testimonials.map(({ testimonial, name, position, _key }) => (
