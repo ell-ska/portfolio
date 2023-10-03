@@ -2,8 +2,8 @@ import About from './About'
 import Skills from './Skills'
 import Education from './Education'
 import Contact from './Contact'
-import type { default as AboutProps } from '@/sanity/types/about'
 import Testimonials from './Testimonials'
+import type { default as AboutProps } from '@/sanity/types/about'
 
 type ContentProps = { activeSection: string } & AboutProps
 
