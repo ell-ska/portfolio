@@ -9,6 +9,7 @@ type PhoneImages = {
 
 interface Project extends SanityDocument {
   name: string
+  sneak_peek: boolean
   slug: Slug
   accent_color: string
   description: PortableTextBlock
@@ -19,7 +20,7 @@ interface Project extends SanityDocument {
 
 type HomepageProject = Pick<
   Project,
-  'name' | 'slug' | 'accent_color' | 'phone_images' | '_id'
+  'name' | 'sneak_peek' | 'slug' | 'accent_color' | 'phone_images' | '_id'
 >
 
 export type { PhoneImages, HomepageProject }

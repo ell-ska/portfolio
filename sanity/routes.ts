@@ -8,7 +8,7 @@ const getHomepageDescription = async () => {
 
 const getHomepageProjects = async () => {
   return await client.fetch(
-    '*[_type == "project"] | order(orderRank) {_id, name, slug, phone_images{main}, accent_color}',
+    '*[_type == "project"] | order(orderRank) {_id, name, sneak_peek, slug, phone_images{main}, accent_color}',
   )
 }
 

@@ -18,6 +18,11 @@ const project = defineType({
       validation: rule => rule.required(),
     }),
     defineField({
+      name: 'sneak_peek',
+      title: 'Sneak peek',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {
@@ -88,6 +93,9 @@ const project = defineType({
       type: 'file',
     }),
   ],
+  initialValue: {
+    sneak_peek: false,
+  },
   preview: {
     select: {
       title: 'name',

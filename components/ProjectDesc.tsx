@@ -4,10 +4,21 @@ import { ArrowUpRight } from 'lucide-react'
 import formatHexColor from '@/utils/formatHexColor'
 import type Project from '@/sanity/types/project'
 
-const ProjectDesc = ({ name, description, links, accent_color }: Project) => {
+const ProjectDesc = ({
+  name,
+  description,
+  links,
+  accent_color,
+  sneak_peek,
+}: Project) => {
   return (
     <section className='mt-12 flex flex-col justify-between gap-8 px-6 md:mt-16 md:flex-row md:px-20'>
-      <h2 className='whitespace-nowrap text-4xl font-bold'>{name}</h2>
+      <div>
+        {sneak_peek && (
+          <h3 className='font-bold text-neutral-700'>sneak peek</h3>
+        )}
+        <h2 className='whitespace-nowrap text-4xl font-bold'>{name}</h2>
+      </div>
       <div className='prose prose-lg max-w-4xl'>
         <PortableText value={description} />
         <div className='not-prose mt-8 flex gap-12 font-bold'>

@@ -24,6 +24,7 @@ const Work = async ({ params: { slug } }: { params: { slug: string } }) => {
         <Banner
           images={project.phone_images}
           accentColor={project.accent_color}
+          sneakPeek={project.sneak_peek}
         />
         <ProjectDesc {...project} />
         {preview_video && (
