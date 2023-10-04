@@ -4,7 +4,6 @@ import { getAbout } from '@/sanity/routes'
 
 const About = async () => {
   const content = await getAbout()
-  console.log(content.testimonials)
 
   return (
     <>
