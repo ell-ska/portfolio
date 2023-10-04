@@ -11,7 +11,7 @@ const Section = ({ content }: { content: About }) => {
 
   return (
     <>
-      <nav className='mb-16 mt-32 flex gap-8'>
+      <nav className='my-12 flex flex-row flex-wrap justify-center gap-x-8 gap-y-4 md:mb-16 md:mt-32'>
         {menuItems.map(item => (
           <button
             key={item}
