@@ -1,41 +1,24 @@
 'use client'
-import { useState } from 'react'
 import Link from 'next/link'
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Logo } from './Icons'
 
 const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
   const { scrollY } = useScroll()
-  const [hidden, setHidden] = useState(initiallyHidden)
 
   const paddingTop = useTransform(scrollY, [80, 100], ['', '1.5rem'])
-
-  useMotionValueEvent(scrollY, 'change', latest => {
-    const previous = scrollY.getPrevious()
-    if (latest > previous) {
-      setHidden(true)
-    } else {
-      setHidden(false)
-    }
-  })
+  const backgroundColor = useTransform(
+    scrollY,
+    [80, 100],
+    ['#ffffff00', '#ffffff'],
+  )
 
   return (
     <motion.header
-      variants={{
-        hidden: { y: '-100%' },
-        visible: { y: 0 },
-      }}
-      animate={initiallyHidden && (hidden ? 'hidden' : 'visible')}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className={`fixed z-50 flex w-full items-center justify-between bg-neutral-100 p-6 transition-all md:p-20 ${
-        initiallyHidden ? '-translate-y-full md:py-6' : 'md:pb-6'
+      className={`fixed z-50 flex w-full items-center justify-between p-6 transition-all md:p-20 ${
+        initiallyHidden ? 'md:py-6' : 'bg-neutral-100 md:pb-6'
       }`}
-      style={initiallyHidden ? {} : { paddingTop }}>
+      style={initiallyHidden ? { backgroundColor } : { paddingTop }}>
       <Link href='/'>
         <Logo></Logo>
       </Link>
