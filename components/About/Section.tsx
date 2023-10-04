@@ -14,6 +14,8 @@ type SectionProps = {
 const Section = ({ content, active }: SectionProps) => {
   const router = useRouter()
 
+  active = active === 'me' ? 'about' : active
+
   return (
     <>
       <nav className='my-12 flex flex-row flex-wrap justify-center gap-x-8 gap-y-4 md:mb-16 md:mt-32'>
@@ -35,10 +37,7 @@ const Section = ({ content, active }: SectionProps) => {
         ))}
       </nav>
       <section className='w-full max-w-4xl text-lg'>
-        <ContentSwitch
-          activeSection={active === 'me' ? 'about' : active}
-          {...content}
-        />
+        <ContentSwitch activeSection={active} {...content} />
       </section>
     </>
   )
