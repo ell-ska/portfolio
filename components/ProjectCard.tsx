@@ -14,7 +14,7 @@ const ProjectCard = ({
   return (
     <Link
       href={`/work/${slug.current}`}
-      className='group relative flex max-h-[calc(100vh-2rem)] min-w-[18rem] flex-1 flex-col items-center justify-center gap-4'>
+      className='group relative flex max-h-[calc(100vh-2rem)] min-w-[20rem] flex-1 flex-col items-center justify-center gap-4'>
       <div
         className='grid w-full place-items-center'
         style={{ backgroundColor: formatHexColor(accent_color) }}>
