@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     ],
     type: 'website',
   },
+  metadataBase: new URL('https://ellska.dev'),
 }
 
 export default function RootLayout({
