@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import { PluginAPI } from 'tailwindcss/types/config'
+
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -27,7 +29,7 @@ module.exports = {
       screens: {
         'touch-device': { raw: '(pointer: coarse) and (hover: none)' },
       },
-      typography: ({ theme }) => ({
+      typography: ({ theme }: { theme: PluginAPI['theme'] }) => ({
         DEFAULT: {
           css: {
             '--tw-prose-body': theme('colors.neutral[900]'),
@@ -72,3 +74,5 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
 }
+
+export default config
