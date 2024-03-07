@@ -124,7 +124,7 @@ const ProjectIcon = ({ color }: { color?: string }) => {
 const DynamicIcon = ({ name, color }: { name: string; color?: string }) => {
   if (name) name = `Si${name.charAt(0).toUpperCase() + name.slice(1)}`
 
-  const Icon = Logos[name as keyof typeof Logos]
+  const Icon = Logos[name as keyof typeof Logos] as Logos.IconType
 
   if (!Icon) {
     return <Logos.SiReact />
