@@ -1,5 +1,5 @@
 import type About from '@/sanity/types/about'
-import isBefore from 'date-fns/isBefore'
+import { isBefore } from 'date-fns'
 
 type EducationProps = Pick<About, 'education'>
 
