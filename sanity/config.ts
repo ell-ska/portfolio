@@ -1,5 +1,5 @@
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
+import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import { Paintbrush, Info } from 'lucide-react'
@@ -14,7 +14,7 @@ export default defineConfig({
   projectId,
   dataset,
   plugins: [
-    deskTool({
+    structureTool({
       structure: (S, context) =>
         S.list()
           .title('Content')
