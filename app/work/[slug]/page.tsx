@@ -6,6 +6,18 @@ import Preview from '@/components/Preview/Preview'
 import NextProject from '@/components/NextProject'
 import type Project from '@/sanity/types/project'
 
+export const generateMetadata = async ({
+  params: { slug },
+}: {
+  params: { slug: string }
+}) => {
+  const project: Project = await getProject(slug)
+
+  return {
+    title: project.name.toLowerCase(),
+  }
+}
+
 const Work = async ({ params: { slug } }: { params: { slug: string } }) => {
   const project: Project = await getProject(slug)
   const { preview_video } = await getPreviewVideo(slug)
