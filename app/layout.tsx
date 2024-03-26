@@ -6,7 +6,10 @@ import type { Metadata } from 'next'
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
 
 export const metadata: Metadata = {
-  title: 'ellska',
+  title: {
+    default: 'ellska',
+    template: '%s | ellska',
+  },
   description:
     'a frontend developer with a passion for building modern and beautiful websites',
   icons: {
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
     title: 'ellska',
     description:
       'a frontend developer with a passion for building modern and beautiful websites',
-    url: 'https://ellska.dev',
+    url: process.env.NEXT_PUBLIC_BASE_URL,
     siteName: 'ellska.dev',
     images: [
       {
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
     ],
     type: 'website',
   },
-  metadataBase: new URL('https://ellska.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   alternates: {
     canonical: '/',
   },

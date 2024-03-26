@@ -2,6 +2,13 @@ import Header from '@/components/Header'
 import Section from '@/components/About/Section'
 import { getAbout } from '@/sanity/routes'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'about me',
+  description: "hi! i'm Ella Skagerström. nice to meet you",
+}
+
 type AboutProps = {
   params: { section: string }
 }
