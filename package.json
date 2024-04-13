@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "9.4.0",
+    "@icons-pack/react-simple-icons": "9.4.1",
     "@portabletext/react": "3.0.18",
     "@sanity/image-url": "1.0.2",
     "@sanity/orderable-document-list": "1.2.1",
