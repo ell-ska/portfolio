@@ -1,5 +1,9 @@
 import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
+import {
+  structureTool,
+  type StructureBuilder,
+  type StructureResolverContext,
+} from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import { Paintbrush, Info } from 'lucide-react'
@@ -15,7 +19,8 @@ export default defineConfig({
   dataset,
   plugins: [
     structureTool({
-      structure: (S, context) =>
+      // FIX: these types should not need to be imported
+      structure: (S: StructureBuilder, context: StructureResolverContext) =>
         S.list()
           .title('Content')
           .items([
