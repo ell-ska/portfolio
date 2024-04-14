@@ -127,11 +127,9 @@ const DynamicIcon = ({ name, color }: { name: string; color?: string }) => {
   const Icon = Logos[name as keyof typeof Logos] as Logos.IconType
 
   if (!Icon) {
-    // @ts-expect-error something is wrong with the icon types
     return <Logos.SiReact />
   }
 
-  // @ts-expect-error something is wrong with the icon types
   return <Icon color={color} />
 }
 
