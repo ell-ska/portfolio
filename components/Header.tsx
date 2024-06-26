@@ -25,6 +25,9 @@ const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
       <nav className='space-x-8'>
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
+        <Link href='https://github.com/ell-ska' target='_blank' rel='noopener'>
+          Github
+        </Link>
       </nav>
     </motion.header>
   )
