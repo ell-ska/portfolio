@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { MoveRight } from 'lucide-react'
-import Project from '@/sanity/types/project'
+import { Project } from '@/sanity/types/project'
 
 const NextProject = ({ name, slug }: Pick<Project, 'name' | 'slug'>) => {
   return (

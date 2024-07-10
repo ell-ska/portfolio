@@ -1,13 +1,13 @@
 import type { SanityDocument } from 'next-sanity'
 import type { File, Image, PortableTextBlock, Slug } from 'sanity'
 
-type PhoneImages = {
+export type PhoneImages = {
   main: Image
   secondary?: Image
   third?: Image
 }
 
-interface Project extends SanityDocument {
+export interface Project extends SanityDocument {
   name: string
   sneak_peek: boolean
   slug: Slug
@@ -18,10 +18,7 @@ interface Project extends SanityDocument {
   preview_video: File
 }
 
-type HomepageProject = Pick<
+export type HomepageProject = Pick<
   Project,
   'name' | 'sneak_peek' | 'slug' | 'accent_color' | 'phone_images' | '_id'
 >
-
-export type { PhoneImages, HomepageProject }
-export default Project

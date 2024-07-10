@@ -1,7 +1,6 @@
 import { Outfit } from 'next/font/google'
-import ogImage from '@/public/og.jpg'
-import './globals.css'
 import type { Metadata } from 'next'
+import './globals.css'
 
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
 
@@ -21,13 +20,6 @@ export const metadata: Metadata = {
       'a frontend developer with a passion for building modern and beautiful websites',
     url: process.env.NEXT_PUBLIC_BASE_URL,
     siteName: 'ellska.dev',
-    images: [
-      {
-        url: ogImage.src,
-        width: 2800,
-        height: 1600,
-      },
-    ],
     type: 'website',
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
