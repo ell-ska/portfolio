@@ -38,6 +38,20 @@ export const getProject = async (slug: string) => {
   )
 }
 
+export const getOgProject = async (
+  slug: string,
+): Promise<Pick<Project, 'accent_color' | 'phone_images' | 'name'>> => {
+  return await client.fetch(
+    `*[_type == "project" && slug.current == "${slug}"]{phone_images, accent_color, name}[0]`,
+    {},
+    {
+      next: {
+        revalidate: 60 * 15, // cache for 15 minutes
+      },
+    },
+  )
+}
+
 export const getHomepageOgProjects = async (): Promise<
   Pick<Project, '_id' | 'accent_color' | 'phone_images'>[]
 > => {
