@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { client } from '@/sanity/lib/client'
-import type Project from '@/sanity/types/project'
+import type { Project } from '@/sanity/types/project'
 
 const getSitemapProjects = async (): Promise<
   Pick<Project, 'slug' | '_updatedAt'>[]

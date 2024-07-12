@@ -1,6 +1,6 @@
 import { client } from './lib/client'
 import type { Slug } from 'sanity'
-import type Project from './types/project'
+import type { Project } from './types/project'
 
 export const getHomepageDescription = async () => {
   return await client.fetch(
@@ -29,6 +29,20 @@ export const getHomepageProjects = async () => {
 export const getProject = async (slug: string) => {
   return await client.fetch(
     `*[_type == "project" && slug.current == "${slug}"][0]`,
+    {},
+    {
+      next: {
+        revalidate: 60 * 15, // cache for 15 minutes
+      },
+    },
+  )
+}
+
+export const getHomepageOgProjects = async (): Promise<
+  Pick<Project, '_id' | 'accent_color' | 'phone_images'>[]
+> => {
+  return await client.fetch(
+    '*[_type == "project"] | order(orderRank) {_id, phone_images{main}, accent_color}[0...3]',
     {},
     {
       next: {

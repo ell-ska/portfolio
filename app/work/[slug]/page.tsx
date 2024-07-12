@@ -4,7 +4,7 @@ import Banner from '@/components/Banner'
 import ProjectDesc from '@/components/ProjectDesc'
 import Preview from '@/components/Preview/Preview'
 import NextProject from '@/components/NextProject'
-import type Project from '@/sanity/types/project'
+import type { Project } from '@/sanity/types/project'
 
 export const generateMetadata = async ({
   params: { slug },
