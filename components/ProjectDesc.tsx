@@ -27,7 +27,8 @@ const ProjectDesc = ({
               href={links?.live_project}
               className='flex items-center gap-2'
               target='_blank'
-              rel='noopener noreferrer'>
+              rel='noopener noreferrer'
+            >
               <ArrowUpRight className='inline' />
               <span>Live project</span>
             </Link>
@@ -38,7 +39,8 @@ const ProjectDesc = ({
               className='flex items-center gap-2'
               style={{ color: formatHexColor(accent_color) }}
               target='_blank'
-              rel='noopener noreferrer'>
+              rel='noopener noreferrer'
+            >
               <ArrowUpRight className='inline' />
               <span>Source code</span>
             </Link>

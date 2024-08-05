@@ -14,7 +14,7 @@ const getSitemapAboutUpdatedAt = async () => {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projects = await getSitemapProjects()
-  const projectDetails = projects.map(project => ({
+  const projectDetails = projects.map((project) => ({
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/work/${project.slug.current}`,
     lastModified: project._updatedAt,
   }))

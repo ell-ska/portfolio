@@ -36,7 +36,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${outfit.variable} min-h-screen font-sans text-neutral`}>
+        className={`${outfit.variable} min-h-screen font-sans text-neutral`}
+      >
         {children}
       </body>
     </html>

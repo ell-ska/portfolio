@@ -19,13 +19,14 @@ const Section = ({ content, active }: SectionProps) => {
   return (
     <>
       <nav className='my-12 flex flex-row flex-wrap justify-center gap-x-8 gap-y-4 md:mb-16 md:mt-32'>
-        {menuItems.map(item => (
+        {menuItems.map((item) => (
           <button
             key={item}
             onClick={() =>
               router.push(`/about/${item === 'about' ? 'me' : item}`)
             }
-            className='relative capitalize'>
+            className='relative capitalize'
+          >
             {item}
             {item === active && (
               <motion.div

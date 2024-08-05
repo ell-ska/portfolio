@@ -8,7 +8,8 @@ const NextProject = ({ name, slug }: Pick<Project, 'name' | 'slug'>) => {
       <span>Next project</span>
       <Link
         href={`/work/${slug.current}`}
-        className='flex items-center justify-between gap-4 md:justify-normal'>
+        className='flex items-center justify-between gap-4 md:justify-normal'
+      >
         <h3 className='text-3xl font-bold'>{name}</h3>
         <MoveRight />
       </Link>

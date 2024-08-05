@@ -15,7 +15,8 @@ const Skills = ({ skills }: SkillsProps) => {
           className='flex items-center gap-2 hover:text-[var(--logo-color)]'
           style={{ '--logo-color': color } as CSSProperties}
           target='_blank'
-          rel='noopener noreferrer'>
+          rel='noopener noreferrer'
+        >
           <span>{name}</span>
           <DynamicIcon name={icon} />
         </Link>

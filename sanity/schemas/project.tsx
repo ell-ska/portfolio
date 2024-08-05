@@ -15,7 +15,7 @@ const project = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'sneak_peek',
@@ -27,23 +27,23 @@ const project = defineType({
       type: 'slug',
       options: {
         source: 'name',
-        slugify: input => slugify(input),
+        slugify: (input) => slugify(input),
       },
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'accent_color',
       title: 'Accent color',
       description: 'Color in hex code',
       type: 'string',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'array',
       of: [{ type: 'block' }],
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'links',
@@ -66,14 +66,14 @@ const project = defineType({
       name: 'phone_images',
       title: 'iPhone images',
       type: 'object',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
       fields: [
         // [] add alt texts
         defineField({
           name: 'main',
           title: 'Main image',
           type: 'image',
-          validation: rule => rule.required(),
+          validation: (rule) => rule.required(),
         }),
         defineField({
           name: 'secondary',
