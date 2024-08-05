@@ -1,10 +1,9 @@
 import { PortableText } from '@portabletext/react'
-import type About from '@/sanity/types/about'
 
-type AboutProps = Pick<About, 'long_description'>
+import type { About as AboutData } from '@/sanity/types/about'
 
-const About = ({ long_description }: AboutProps) => {
+export const About = ({
+  long_description,
+}: Pick<AboutData, 'long_description'>) => {
   return <PortableText value={long_description} />
 }
-
-export default About

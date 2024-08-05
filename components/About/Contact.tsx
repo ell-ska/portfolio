@@ -1,9 +1,8 @@
-import About from '@/sanity/types/about'
 import Link from 'next/link'
 
-type ContactProps = Pick<About, 'contact'>
+import { About } from '@/sanity/types/about'
 
-const Contact = ({ contact }: ContactProps) => {
+export const Contact = ({ contact }: Pick<About, 'contact'>) => {
   return (
     <div className='flex flex-wrap justify-center gap-20'>
       {contact.map(({ _key, name, link }) => (
@@ -14,5 +13,3 @@ const Contact = ({ contact }: ContactProps) => {
     </div>
   )
 }
-
-export default Contact

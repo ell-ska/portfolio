@@ -2,13 +2,14 @@
 /* eslint-disable jsx-a11y/alt-text */
 
 import { ImageResponse } from 'next/og'
+
 import {
   getOutfitRegularFont,
   getOutfitBoldFont,
 } from '@/lib/og/get-outfit-font'
 import { getHomepageOgProjects } from '@/sanity/routes'
 import { urlForImage } from '@/sanity/lib/image'
-import formatHexColor from '@/utils/formatHexColor'
+import { formatHexColor } from '@/utils/formatHexColor'
 
 export const runtime = 'edge'
 

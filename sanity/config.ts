@@ -7,13 +7,14 @@ import {
 import { visionTool } from '@sanity/vision'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import { Paintbrush, Info } from 'lucide-react'
+
 import { apiVersion, dataset, projectId } from './env'
 import { schema } from './schemas'
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 const singletonTypes = new Set(['about'])
 
-export default defineConfig({
+export const config = defineConfig({
   basePath: '/studio',
   projectId,
   dataset,

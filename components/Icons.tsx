@@ -1,7 +1,8 @@
 import * as Logos from '@icons-pack/react-simple-icons'
-import formatHexColor from '@/utils/formatHexColor'
 
-const Logo = ({ className }: { className?: string }) => {
+import { formatHexColor } from '@/utils/formatHexColor'
+
+export const Logo = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -47,7 +48,7 @@ const Logo = ({ className }: { className?: string }) => {
   )
 }
 
-const Flower1 = () => {
+export const Flower1 = () => {
   return (
     <svg
       width='114'
@@ -68,7 +69,7 @@ const Flower1 = () => {
   )
 }
 
-const Flower2 = () => {
+export const Flower2 = () => {
   return (
     <svg
       width='82'
@@ -89,7 +90,7 @@ const Flower2 = () => {
   )
 }
 
-const Flower3 = () => {
+export const Flower3 = () => {
   return (
     <svg
       width='130'
@@ -110,7 +111,7 @@ const Flower3 = () => {
   )
 }
 
-const ProjectIcon = ({ color }: { color?: string }) => {
+export const ProjectIcon = ({ color }: { color?: string }) => {
   const formatedColor: string | undefined = formatHexColor(color || '#111827')
   return (
     <svg
@@ -126,7 +127,13 @@ const ProjectIcon = ({ color }: { color?: string }) => {
   )
 }
 
-const DynamicIcon = ({ name, color }: { name: string; color?: string }) => {
+export const DynamicIcon = ({
+  name,
+  color,
+}: {
+  name: string
+  color?: string
+}) => {
   if (name) name = `Si${name.charAt(0).toUpperCase() + name.slice(1)}`
 
   const Icon = Logos[name as keyof typeof Logos] as Logos.IconType
@@ -137,5 +144,3 @@ const DynamicIcon = ({ name, color }: { name: string; color?: string }) => {
 
   return <Icon color={color} />
 }
-
-export { Logo, Flower1, Flower2, Flower3, ProjectIcon, DynamicIcon }

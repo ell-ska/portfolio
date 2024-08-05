@@ -1,13 +1,13 @@
 import { ChevronLeft, ChevronRight, LayoutGrid, Lock } from 'lucide-react'
 
-const Nav = ({ link }: { link: string }) => {
+export const Navigation = ({ link }: { link: string }) => {
   return (
     <div className='grid grid-cols-[3rem,1fr,3rem] items-center border-y border-neutral-300 px-4 py-2 text-neutral-400 md:grid-cols-[7rem,1fr,7rem] md:gap-8 md:rounded-t-xl md:border'>
       <div className='flex items-center gap-4'>
         <div className='flex gap-[6px]'>
-          <div className='h-[10px] w-[10px] rounded-full bg-[#DC7265]'></div>
-          <div className='h-[10px] w-[10px] rounded-full bg-[#ECC164]'></div>
-          <div className='h-[10px] w-[10px] rounded-full bg-[#7BC262]'></div>
+          <div className='h-[10px] w-[10px] rounded-full bg-[#DC7265]' />
+          <div className='h-[10px] w-[10px] rounded-full bg-[#ECC164]' />
+          <div className='h-[10px] w-[10px] rounded-full bg-[#7BC262]' />
         </div>
         <div className='hidden gap-[6px] md:flex'>
           <ChevronLeft />
@@ -24,5 +24,3 @@ const Nav = ({ link }: { link: string }) => {
     </div>
   )
 }
-
-export default Nav

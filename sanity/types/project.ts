@@ -7,7 +7,7 @@ export type PhoneImages = {
   third?: Image
 }
 
-export interface Project extends SanityDocument {
+export type Project = SanityDocument & {
   name: string
   sneak_peek: boolean
   slug: Slug

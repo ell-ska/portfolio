@@ -1,9 +1,10 @@
-import slugify from '@/utils/slugify'
 import { defineField, defineType } from 'sanity'
 import { orderRankField } from '@sanity/orderable-document-list'
+
+import { slugify } from '@/utils/slugify'
 import { ProjectIcon } from '@/components/Icons'
 
-const project = defineType({
+export const project = defineType({
   name: 'project',
   title: 'Projects',
   type: 'document',
@@ -109,5 +110,3 @@ const project = defineType({
     },
   },
 })
-
-export { project }

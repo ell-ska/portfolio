@@ -1,7 +1,5 @@
 import { redirect } from 'next/navigation'
 
-const Page = () => {
+export default function AboutPage() {
   return redirect('/about/me')
 }
-
-export default Page

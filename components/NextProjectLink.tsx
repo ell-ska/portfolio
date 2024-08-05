@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import { MoveRight } from 'lucide-react'
-import { Project } from '@/sanity/types/project'
 
-const NextProject = ({ name, slug }: Pick<Project, 'name' | 'slug'>) => {
+import type { Project } from '@/sanity/types/project'
+
+export const NextProjectLink = ({
+  name,
+  slug,
+}: Pick<Project, 'name' | 'slug'>) => {
   return (
     <section className='mt-12 px-6 pb-8 md:px-20'>
       <span>Next project</span>
@@ -16,5 +20,3 @@ const NextProject = ({ name, slug }: Pick<Project, 'name' | 'slug'>) => {
     </section>
   )
 }
-
-export default NextProject

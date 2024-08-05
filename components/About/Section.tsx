@@ -1,17 +1,20 @@
 'use client'
+
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import ContentSwitch from './ContentSwitch'
-import About from '@/sanity/types/about'
+
+import { ContentSwitch } from './ContentSwitch'
+import type { About } from '@/sanity/types/about'
 
 const menuItems = ['about', 'skills', 'education', 'contact', 'testimonials']
 
-type SectionProps = {
+export const Section = ({
+  content,
+  active,
+}: {
   content: About
   active: string
-}
-
-const Section = ({ content, active }: SectionProps) => {
+}) => {
   const router = useRouter()
 
   active = active === 'me' ? 'about' : active
@@ -43,5 +46,3 @@ const Section = ({ content, active }: SectionProps) => {
     </>
   )
 }
-
-export default Section

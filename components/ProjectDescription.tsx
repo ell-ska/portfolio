@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { ArrowUpRight } from 'lucide-react'
-import formatHexColor from '@/utils/formatHexColor'
+import { formatHexColor } from '@/utils/formatHexColor'
 import type { Project } from '@/sanity/types/project'
 
-const ProjectDesc = ({
+export const ProjectDescription = ({
   name,
   description,
   links,
@@ -50,5 +50,3 @@ const ProjectDesc = ({
     </section>
   )
 }
-
-export default ProjectDesc

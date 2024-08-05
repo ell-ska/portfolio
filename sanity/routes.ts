@@ -1,5 +1,6 @@
-import { client } from './lib/client'
 import type { Slug } from 'sanity'
+
+import { client } from './lib/client'
 import type { Project } from './types/project'
 
 export const getHomepageDescription = async () => {

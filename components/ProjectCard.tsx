@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { MoveRight } from 'lucide-react'
+
 import { urlForImage } from '@/sanity/lib/image'
-import formatHexColor from '@/utils/formatHexColor'
+import { formatHexColor } from '@/utils/formatHexColor'
 import type { HomepageProject } from '@/sanity/types/project'
 
-const ProjectCard = ({
+export const ProjectCard = ({
   name,
   sneak_peek,
   slug,
@@ -27,8 +28,8 @@ const ProjectCard = ({
           alt=''
           height={662}
           width={320}
-        ></Image>
-        <div className='absolute inset-0 bg-neutral-100 opacity-0 md:group-hover:opacity-80'></div>
+        />
+        <div className='absolute inset-0 bg-neutral-100 opacity-0 md:group-hover:opacity-80' />
       </div>
       <div className='flex w-full items-center justify-between md:absolute md:justify-center md:opacity-0 md:group-hover:opacity-100'>
         <div className='md:text-center'>
@@ -42,5 +43,3 @@ const ProjectCard = ({
     </Link>
   )
 }
-
-export default ProjectCard

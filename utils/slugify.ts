@@ -1,4 +1,4 @@
-const slugify = (input: string) => {
+export const slugify = (input: string) => {
   return input
     .toString()
     .normalize('NFD')
@@ -9,5 +9,3 @@ const slugify = (input: string) => {
     .replace(/[^\w-]+/g, '')
     .replace(/--+/g, '-')
 }
-
-export default slugify
