@@ -1,9 +1,10 @@
 import Image from 'next/image'
+
 import { urlForImage } from '@/sanity/lib/image'
-import formatHexColor from '@/utils/formatHexColor'
+import { formatHexColor } from '@/utils/formatHexColor'
 import type { PhoneImages } from '@/sanity/types/project'
 
-const Banner = ({
+export const Banner = ({
   images,
   accentColor,
   sneakPeek,
@@ -15,6 +16,7 @@ const Banner = ({
   const imageClassName = `object-contain ${
     sneakPeek && 'blur-sm hover:blur-none transition'
   }`
+
   return (
     <section
       className='flex h-[75vh] items-center justify-center overflow-hidden'
@@ -28,7 +30,7 @@ const Banner = ({
               src={urlForImage(images.secondary).url()}
               alt=''
               fill
-            ></Image>
+            />
           </div>
         )}
         <Image
@@ -36,7 +38,7 @@ const Banner = ({
           src={urlForImage(images.main).url()}
           alt=''
           fill
-        ></Image>
+        />
         {images.third && (
           <div className='absolute -top-8 right-0 h-full w-full translate-x-full md:-right-20 md:-top-20'>
             <Image
@@ -44,12 +46,10 @@ const Banner = ({
               src={urlForImage(images.third).url()}
               alt=''
               fill
-            ></Image>
+            />
           </div>
         )}
       </div>
     </section>
   )
 }
-
-export default Banner

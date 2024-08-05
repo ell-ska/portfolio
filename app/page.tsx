@@ -1,15 +1,15 @@
 import { getHomepageDescription, getHomepageProjects } from '@/sanity/routes'
-import Header from '@/components/Header'
-import ProjectCard from '@/components/ProjectCard'
+import { Header } from '@/components/Header'
+import { ProjectCard } from '@/components/ProjectCard'
 import type { HomepageProject } from '@/sanity/types/project'
 
-const Home = async () => {
+export default async function HomePage() {
   const { short_description } = await getHomepageDescription()
   const projects: HomepageProject[] = await getHomepageProjects()
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <main className='flex flex-col px-6 pb-6 pt-14 md:px-20 md:pb-20 md:pt-28'>
         <h1 className='mt-16 text-4xl md:mt-32 md:text-6xl md:leading-tight'>
           {short_description}
@@ -23,5 +23,3 @@ const Home = async () => {
     </>
   )
 }
-
-export default Home

@@ -1,9 +1,15 @@
 'use client'
+
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
+
 import { Logo } from './Icons'
 
-const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
+export const Header = ({
+  initiallyHidden = false,
+}: {
+  initiallyHidden?: boolean
+}) => {
   const { scrollY } = useScroll()
 
   const paddingTop = useTransform(scrollY, [80, 100], ['', '1.5rem'])
@@ -21,7 +27,7 @@ const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
       style={initiallyHidden ? { backgroundColor } : { paddingTop }}
     >
       <Link href='/'>
-        <Logo></Logo>
+        <Logo />
       </Link>
       <nav className='space-x-8'>
         <Link href='/about'>About</Link>
@@ -32,5 +38,3 @@ const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
     </motion.header>
   )
 }
-
-export default Header

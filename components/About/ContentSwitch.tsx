@@ -1,20 +1,18 @@
-import About from './About'
-import Skills from './Skills'
-import Education from './Education'
-import Contact from './Contact'
-import Testimonials from './Testimonials'
-import type { default as AboutProps } from '@/sanity/types/about'
+import { About } from './About'
+import { Skills } from './Skills'
+import { Education } from './Education'
+import { Contact } from './Contact'
+import { Testimonials } from './Testimonials'
+import type { About as AboutData } from '@/sanity/types/about'
 
-type ContentProps = { activeSection: string } & AboutProps
-
-const ContentSwitch = ({
+export const ContentSwitch = ({
   activeSection,
   long_description,
   skills,
   education,
   contact,
   testimonials,
-}: ContentProps) => {
+}: { activeSection: string } & AboutData) => {
   switch (activeSection) {
     case 'about':
       return long_description && <About long_description={long_description} />
@@ -28,5 +26,3 @@ const ContentSwitch = ({
       return testimonials && <Testimonials testimonials={testimonials} />
   }
 }
-
-export default ContentSwitch

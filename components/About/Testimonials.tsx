@@ -1,9 +1,8 @@
 import { PortableText } from '@portabletext/react'
-import type About from '@/sanity/types/about'
 
-type TestimonialsProps = Pick<About, 'testimonials'>
+import type { About } from '@/sanity/types/about'
 
-const Testimonials = ({ testimonials }: TestimonialsProps) => {
+export const Testimonials = ({ testimonials }: Pick<About, 'testimonials'>) => {
   return (
     <div className='flex flex-wrap justify-center gap-8'>
       {testimonials.map(({ testimonial, name, position, _key }) => (
@@ -38,5 +37,3 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
     </div>
   )
 }
-
-export default Testimonials

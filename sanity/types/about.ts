@@ -1,7 +1,7 @@
 import type { SanityDocument } from 'next-sanity'
 import type { PortableTextBlock } from 'sanity'
 
-interface About extends SanityDocument {
+export type About = SanityDocument & {
   short_description: string
   long_description: PortableTextBlock
   skills: {
@@ -25,5 +25,3 @@ interface About extends SanityDocument {
     _key: string
   }[]
 }
-
-export default About

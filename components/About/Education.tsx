@@ -1,9 +1,8 @@
-import type About from '@/sanity/types/about'
 import { isBefore } from 'date-fns'
 
-type EducationProps = Pick<About, 'education'>
+import type { About } from '@/sanity/types/about'
 
-const Education = ({ education }: EducationProps) => {
+export const Education = ({ education }: Pick<About, 'education'>) => {
   return (
     <div className='space-y-12 lg:space-y-4'>
       {education.map(({ _key, title, duration, school }) => {
@@ -24,5 +23,3 @@ const Education = ({ education }: EducationProps) => {
     </div>
   )
 }
-
-export default Education

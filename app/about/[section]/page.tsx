@@ -1,19 +1,19 @@
-import Header from '@/components/Header'
-import Section from '@/components/About/Section'
-import { getAbout } from '@/sanity/routes'
-
 import type { Metadata } from 'next'
+
+import { getAbout } from '@/sanity/routes'
+import { Header } from '@/components/Header'
+import { Section } from '@/components/About/Section'
 
 export const metadata: Metadata = {
   title: 'about me',
   description: "hi! i'm Ella Skagerström. nice to meet you",
 }
 
-type AboutProps = {
+export default async function AboutSectionPage({
+  params,
+}: {
   params: { section: string }
-}
-
-const About = async ({ params }: AboutProps) => {
+}) {
   const content = await getAbout()
 
   return (
@@ -25,5 +25,3 @@ const About = async ({ params }: AboutProps) => {
     </>
   )
 }
-
-export default About

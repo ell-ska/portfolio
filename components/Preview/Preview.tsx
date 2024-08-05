@@ -1,7 +1,7 @@
-import Nav from './Nav'
-import Video from './Video'
+import { Navigation } from './Navigation'
+import { Video } from './Video'
 
-const Preview = ({
+export const Preview = ({
   videoUrl,
   websiteUrl,
 }: {
@@ -10,10 +10,8 @@ const Preview = ({
 }) => {
   return (
     <section className='mx-auto my-12 max-w-7xl md:my-24 md:px-20'>
-      <Nav link={websiteUrl} />
+      <Navigation link={websiteUrl} />
       <Video url={videoUrl} />
     </section>
   )
 }
-
-export default Preview

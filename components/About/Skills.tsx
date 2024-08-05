@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import { DynamicIcon } from '../Icons'
 import type { CSSProperties } from 'react'
-import type About from '@/sanity/types/about'
 
-type SkillsProps = Pick<About, 'skills'>
+import { DynamicIcon } from '../Icons'
+import type { About } from '@/sanity/types/about'
 
-const Skills = ({ skills }: SkillsProps) => {
+export const Skills = ({ skills }: Pick<About, 'skills'>) => {
   return (
     <div className='flex flex-wrap justify-center gap-8'>
       {skills.map(({ name, link, icon, color, _key }) => (
@@ -24,5 +23,3 @@ const Skills = ({ skills }: SkillsProps) => {
     </div>
   )
 }
-
-export default Skills

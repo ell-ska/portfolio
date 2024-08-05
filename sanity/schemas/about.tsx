@@ -1,7 +1,8 @@
-import { DynamicIcon } from '@/components/Icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
-const about = defineType({
+import { DynamicIcon } from '@/components/Icons'
+
+export const about = defineType({
   name: 'about',
   title: 'About',
   type: 'document',
@@ -188,5 +189,3 @@ const about = defineType({
     }),
   ],
 })
-
-export { about }
