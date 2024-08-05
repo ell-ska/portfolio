@@ -18,7 +18,8 @@ const Header = ({ initiallyHidden = false }: { initiallyHidden?: boolean }) => {
       className={`fixed z-50 flex w-full items-center justify-between p-6 transition-all md:p-20 ${
         initiallyHidden ? 'md:py-6' : 'bg-neutral-100 md:pb-6'
       }`}
-      style={initiallyHidden ? { backgroundColor } : { paddingTop }}>
+      style={initiallyHidden ? { backgroundColor } : { paddingTop }}
+    >
       <Link href='/'>
         <Logo></Logo>
       </Link>

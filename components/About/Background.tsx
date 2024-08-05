@@ -6,7 +6,7 @@ const Background = ({ activeSection }: { activeSection: string }) => {
   const [change, setChange] = useState(false)
 
   useEffect(() => {
-    setChange(prev => !prev)
+    setChange((prev) => !prev)
   }, [activeSection])
 
   return (
@@ -18,7 +18,8 @@ const Background = ({ activeSection }: { activeSection: string }) => {
         }}
         animate={change ? 'first' : 'second'}
         transition={{ duration: 0.5, ease: 'backInOut' }}
-        className='absolute'>
+        className='absolute'
+      >
         <Flower1 />
       </motion.div>
       <motion.div className='absolute bottom-20 right-32'>

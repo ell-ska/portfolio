@@ -15,7 +15,7 @@ const Home = async () => {
           {short_description}
         </h1>
         <section className='mt-16 flex flex-wrap gap-12 md:mt-24 md:gap-2'>
-          {projects.map(project => (
+          {projects.map((project) => (
             <ProjectCard key={project._id} {...project} />
           ))}
         </section>

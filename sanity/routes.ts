@@ -99,7 +99,7 @@ export const getNextProject = async (previous: Slug) => {
   )
 
   const previousIndex = result.findIndex(
-    project => project.slug.current === previous.current,
+    (project) => project.slug.current === previous.current,
   )
 
   return previousIndex + 1 >= count ? result[0] : result[previousIndex + 1]
