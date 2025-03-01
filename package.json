@@ -26,7 +26,7 @@
     "framer-motion": "12.4.7",
     "lucide-react": "0.477.0",
     "next": "14.2.24",
-    "next-sanity": "9.8.59",
+    "next-sanity": "9.8.60",
     "postcss": "8.5.3",
     "prettier": "3.5.2",
     "prettier-plugin-tailwindcss": "0.6.11",
