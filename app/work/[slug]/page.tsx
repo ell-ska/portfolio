@@ -6,11 +6,10 @@ import { Preview } from '@/components/Preview/Preview'
 import { NextProjectLink } from '@/components/NextProjectLink'
 import type { Project } from '@/sanity/types/project'
 
-export const generateMetadata = async ({
-  params: { slug },
-}: {
-  params: { slug: string }
-}) => {
+type Params = Promise<{ slug: string }>
+
+export const generateMetadata = async ({ params }: { params: Params }) => {
+  const { slug } = await params
   const project: Project = await getProject(slug)
 
   return {
@@ -18,11 +17,8 @@ export const generateMetadata = async ({
   }
 }
 
-export default async function WorkPage({
-  params: { slug },
-}: {
-  params: { slug: string }
-}) {
+export default async function WorkPage({ params }: { params: Params }) {
+  const { slug } = await params
   const project: Project = await getProject(slug)
   const { preview_video } = await getPreviewVideo(slug)
   const nextProject: Pick<Project, 'name' | 'slug'> = await getNextProject(

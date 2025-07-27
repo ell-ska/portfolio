@@ -122,7 +122,7 @@ export const ProjectIcon = ({ color }: { color?: string }) => {
       xmlns='http://www.w3.org/2000/svg'
     >
       <circle cx='12' cy='12' r='12' fill={formatedColor} />
-      <circle cx='12' cy='12' r='8' stroke='white' stroke-width='2' />
+      <circle cx='12' cy='12' r='8' stroke='white' strokeWidth='2' />
     </svg>
   )
 }
