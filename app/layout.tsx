@@ -7,18 +7,15 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
 
 export const metadata: Metadata = {
   title: {
-    default: 'ellska',
+    default: 'ellska - fullstack developer',
     template: '%s | ellska',
   },
   description:
-    'a frontend developer with a passion for building modern and beautiful websites',
-  icons: {
-    icon: '/favicon.svg',
-  },
+    'ella skagerström is a fullstack developer with a passion for building modern and beautiful websites',
   openGraph: {
     title: 'ellska',
     description:
-      'a frontend developer with a passion for building modern and beautiful websites',
+      'a fullstack developer with a passion for building modern and beautiful websites',
     url: process.env.NEXT_PUBLIC_BASE_URL,
     siteName: 'ellska.dev',
     type: 'website',
