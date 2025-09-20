@@ -15,7 +15,7 @@
     "@sanity/image-url": "1.2.0",
     "@sanity/orderable-document-list": "1.4.0",
     "@sanity/vision": "4.8.1",
-    "@tailwindcss/typography": "0.5.16",
+    "@tailwindcss/typography": "0.5.18",
     "@types/node": "24.4.0",
     "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",
