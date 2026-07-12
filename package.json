@@ -21,7 +21,7 @@
     "@types/react-dom": "19.2.3",
     "autoprefixer": "10.5.2",
     "date-fns": "4.4.0",
-    "eslint": "9.39.5",
+    "eslint": "10.7.0",
     "eslint-config-next": "15.5.20",
     "framer-motion": "12.42.2",
     "lucide-react": "0.577.0",
